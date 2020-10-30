@@ -7,7 +7,7 @@ const MainNavigator = createStackNavigator({
 	MainScreen: { screen: MainScreen },
 	Maps: { screen: MapsScreen, navigationOptions: {
 		headerTitle: 'Radar Demo!',
-	  }, params : { latLng : { latitude: 40.730610, longitude: -73.935242 }  } }
+	  }, params : {} }
 });
 
 const App = createAppContainer(MainNavigator);

@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
 import { View, Button } from 'react-native';
 
+export const EFFICIENT = 'EFFICIENT';
+export const RESPONSIVE = 'RESPONSIVE';
+export const CONTINUOUS = 'CONTINUOUS';
+
 export default class MainScreen extends Component {
 	render() {
 		const { navigation } = this.props;
@@ -13,9 +17,9 @@ export default class MainScreen extends Component {
 				padding: 10
 			}]
 		}>
-			<Button title={'Demo Efficient Tracking'} style={{flex: 1}} color='green' onPress={() => this.props.navigation.navigate('Maps')} tracking='EFFICIENT' />
-			<Button title={'Demo Responsive Tracking'} style={{flex: 1}} color='blue' onPress={() => this.props.navigation.navigate('Maps')} tracking='RESPONSIVE' />
-			<Button title={'Demo Continuous Tracking'} style={{flex: 1}} color='red' onPress={() => this.props.navigation.navigate('Maps')} tracking='CONTINUOUS' />
+			<Button title={'Demo Efficient Tracking'} style={{flex: 1}} color='green' onPress={() => this.props.navigation.navigate('Maps', {tracking : EFFICIENT})} />
+			<Button title={'Demo Responsive Tracking'} style={{flex: 1}} color='blue' onPress={() => this.props.navigation.navigate('Maps', {tracking :RESPONSIVE})} />
+			<Button title={'Demo Continuous Tracking'} style={{flex: 1}} color='red' onPress={() => this.props.navigation.navigate('Maps', {tracking : CONTINUOUS})} />
 		</View>);
 	}
 }
